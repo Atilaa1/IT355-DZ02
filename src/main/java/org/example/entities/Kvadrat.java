@@ -40,13 +40,22 @@ public class Kvadrat implements Oblik {
 
     @Override
     public double obim() {
-         obim=4 * stranica;
-         return obim;
+        if(stranica<=0){
+            throw new IllegalArgumentException("Vrednost mora biti veca od 0");
+        }
+        else {
+            obim = 4 * stranica;
+        }
+        return obim;
     }
 
     @Override
     public double povrsina() {
-              povrsina=  stranica * stranica;
-              return  povrsina;
+        if(stranica<=0){
+            throw new IllegalArgumentException("Vrednost mora biti veca od 0");
+        }else {
+            povrsina = stranica * stranica;
+        }
+        return  povrsina;
     }
 }

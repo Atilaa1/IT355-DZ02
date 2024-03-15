@@ -39,13 +39,23 @@ public class Krug implements Oblik {
 
     @Override
     public double obim() {
+        if(poluprecnik<=0){
+        throw new IllegalArgumentException("Vrednost mora biti veca od 0");
+        }
+        else{
         obim= 2 * Math.PI * poluprecnik;
+        }
         return obim;
     }
 
     @Override
     public double povrsina() {
-        povrsina= Math.PI * Math.pow(poluprecnik, 2);
+        if(poluprecnik<=0){
+            throw new IllegalArgumentException("Vrednost mora biti veca od 0");
+        }
+        else {
+            povrsina = Math.PI * Math.pow(poluprecnik, 2);
+        }
         return  povrsina;
     }
 }
